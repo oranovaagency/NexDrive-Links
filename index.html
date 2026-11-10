@@ -70,6 +70,10 @@
   .tools button { min-height: 52px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 16px; background: rgba(20,20,22,.9); border: 1px solid var(--line); font: 800 14px/1.2 var(--body); }
   .tools svg { width: 20px; height: 20px; fill: none; stroke: var(--orange); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   footer { text-align: center; padding: 28px 0 calc(34px + env(safe-area-inset-bottom)); color: var(--muted); font-size: 13px; }
+  footer p { color: var(--muted); font-size: 13px; }
+  .credit { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; direction: ltr; opacity: .75; text-decoration: none; }
+  .credit span { font: 600 10px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .credit img { height: 14px; width: auto; }
   .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px); opacity: 0; background: var(--orange); color: #fff; font-weight: 800; padding: 10px 18px; border-radius: 999px; transition: .3s; pointer-events: none; }
   .toast.on { opacity: 1; transform: translate(-50%, 0); }
   @media (prefers-reduced-motion: reduce) { .link, .toast { transition: none; } }
@@ -115,22 +119,17 @@
     </a>
   </main>
 
-  <h2 data-i="fleetH" data-html>Notre <em>flotte</em></h2>
-  <p class="sub" data-i="fleetS">Disponibilités et prix sur WhatsApp.</p>
-  <div class="work">
-    <a href="https://nexdrive-oran.netlify.app/#ferrari" target="_blank" rel="noopener"><img src="img/ferrari-1.webp" alt="Ferrari 296 GTS noir mat" loading="lazy"><div><b>Ferrari 296 GTS</b><small data-i="f1">Noir mat · 2026</small></div></a>
-    <a href="https://nexdrive-oran.netlify.app/#flotte" target="_blank" rel="noopener"><img src="img/rolls-1.webp" alt="Rolls-Royce Ghost blanche" loading="lazy"><div><b>Rolls-Royce Ghost</b><small data-i="f2">Blanche</small></div></a>
-    <a href="https://nexdrive-oran.netlify.app/#mariage" target="_blank" rel="noopener"><img src="img/g63-wed.webp" alt="Mercedes-AMG G 63 décorée pour un mariage" loading="lazy"><div><b>Mercedes-AMG G 63</b><small data-i="f3">Idéale pour les mariages</small></div></a>
-    <a href="https://nexdrive-oran.netlify.app/#flotte" target="_blank" rel="noopener"><img src="img/cayenne-1.webp" alt="Porsche Cayenne Coupé" loading="lazy"><div><b>Porsche Cayenne Coupé</b><small>2026</small></div></a>
-    <a href="https://nexdrive-oran.netlify.app/#flotte" target="_blank" rel="noopener"><img src="img/g63-night.webp" alt="Mercedes-AMG G 63 la nuit" loading="lazy"><div><b>Mercedes-AMG G 63</b><small data-i="f5">Noire</small></div></a>
-  </div>
 
+ 
   <div class="tools">
     <button type="button" id="save"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0M19 4v4M17 6h4"/></svg><span data-i="save">Enregistrer le contact</span></button>
     <button type="button" id="share"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span data-i="share">Partager</span></button>
   </div>
 
-  <footer data-i="foot">© 2026 NEX DRIVE · Oran, Algérie</footer>
+  <footer>
+    <p data-i="foot">© 2026 NEX DRIVE · Oran, Algérie</p>
+    <a class="credit" href="https://oranova-agency.com/" target="_blank" rel="noopener" aria-label="Designed by Oranova"><span>Designed by</span><img src="img/oranova.svg" alt="Oranova"></a>
+  </footer>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
